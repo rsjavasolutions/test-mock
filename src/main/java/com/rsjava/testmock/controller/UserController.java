@@ -19,6 +19,13 @@ public class UserController {
         return userService.getAllUsers();
     }
 
+    @GetMapping("/users/active")
+    public List<User> getActiveUsers(){
+        return userService.getActiveUsers();
+    }
 
-
+    @GetMapping("/users/superusers")
+    public List<User> getActiveSuperUsers(){
+        return userService.getActiveSuperUsers();
+    }
 }
