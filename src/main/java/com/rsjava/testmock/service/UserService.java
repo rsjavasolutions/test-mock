@@ -1,5 +1,7 @@
 package com.rsjava.testmock.service;
 
+import com.rsjava.testmock.model.User;
+import com.rsjava.testmock.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,5 +34,4 @@ public class UserService {
                 .filter(user -> user.isSuperuser())
                 .collect(Collectors.toList());
     }
-
 }
