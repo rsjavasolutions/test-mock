@@ -34,4 +34,8 @@ public class UserService {
                 .filter(user -> user.isSuperuser())
                 .collect(Collectors.toList());
     }
+
+    public User saveUser(User user){
+        return userRepository.save(user);
+    }
 }

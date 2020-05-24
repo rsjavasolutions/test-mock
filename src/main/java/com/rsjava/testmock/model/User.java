@@ -1,5 +1,6 @@
 package com.rsjava.testmock.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -8,7 +9,6 @@ import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Data
 @Table(name = "users")
 public class User {
@@ -21,4 +21,9 @@ public class User {
     private boolean active;
     private boolean superuser;
 
+    public User(String username, boolean active, boolean superuser) {
+        this.username = username;
+        this.active = active;
+        this.superuser = superuser;
+    }
 }
